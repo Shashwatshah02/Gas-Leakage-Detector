@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gas_leakage_detector/Register.dart';
+import 'package:gas_leakage_detector/Login.dart';
 
 void main() {
   runApp(IPD());
@@ -14,7 +14,7 @@ class IPD extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.white,
-        body: Register(),
+        body: Login(),
       ) 
     );
   }
