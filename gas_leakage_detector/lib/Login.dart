@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class Login extends StatefulWidget {
   const Login({super.key});
 
@@ -9,11 +10,10 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
-
-    return SafeArea(
+    return Material(
       child: SingleChildScrollView(
-        child: Expanded(
-          child: Stack(children: [
+        child: Stack(
+          children: [
             Positioned(
               top: 0,
               left: 0,
@@ -28,7 +28,7 @@ class _LoginState extends State<Login> {
                     child: Text(
                       'Welcome Back!',
                       style: TextStyle(
-                        fontWeight:FontWeight.bold,
+                        fontWeight: FontWeight.bold,
                         fontSize: 22.0,
                       ),
                     ),
@@ -43,12 +43,11 @@ class _LoginState extends State<Login> {
                     width: 325,
                     child: TextField(
                       decoration: InputDecoration(
-                          fillColor:Colors.white,
+                          fillColor: Colors.white,
                           hintText: 'Enter your phone number',
-                          border:OutlineInputBorder(
-                            borderRadius:BorderRadius.circular(17),
-                          )
-                      ),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(17),
+                          )),
                     ),
                   ),
                   SizedBox(
@@ -57,19 +56,17 @@ class _LoginState extends State<Login> {
                       padding: const EdgeInsets.only(top: 10.0),
                       child: TextField(
                         decoration: InputDecoration(
-                            fillColor:Colors.white,
+                            fillColor: Colors.white,
                             hintText: 'Enter your password',
-                            border:OutlineInputBorder(
-                              borderRadius:BorderRadius.circular(17),
-                            )
-                        ),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(17),
+                            )),
                       ),
                     ),
                   ),
                   const Padding(
                     padding: EdgeInsets.only(top: 10.0),
-                    child: Text
-                      (
+                    child: Text(
                       'Forgot your password?',
                       style: TextStyle(
                         fontSize: 13.0,
@@ -83,9 +80,8 @@ class _LoginState extends State<Login> {
                     child: SizedBox(
                       width: 293.0,
                       height: 50,
-                      child: TextButton(onPressed: (){
-
-                      },
+                      child: TextButton(
+                        onPressed: () {},
                         style: TextButton.styleFrom(
                           foregroundColor: Colors.white,
                           backgroundColor: const Color(0xFF50C2C9),
@@ -106,12 +102,12 @@ class _LoginState extends State<Login> {
                         style: TextStyle(color: Colors.black),
                         children: [
                           TextSpan(text: "Don't have an account? "),
-                          TextSpan(text: 'Sign Up.',
+                          TextSpan(
+                            text: 'Sign Up.',
                             style: TextStyle(
                               color: Color(0xFF50C2C9),
                               fontWeight: FontWeight.bold,
                             ),
-                         
                           ),
                         ],
                       ),
@@ -120,10 +116,9 @@ class _LoginState extends State<Login> {
                 ],
               ),
             ),
-          ],),
+          ],
         ),
       ),
     );
   }
 }
-
